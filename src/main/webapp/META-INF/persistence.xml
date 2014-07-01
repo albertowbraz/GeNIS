@@ -21,6 +21,7 @@
 			<property name="hibernate.format_sql" value="true" />
 
 			<property name="javax.persistence.validation.mode" value="NONE" />
+			<property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
 
 		</properties>
 	</persistence-unit>

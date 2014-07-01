@@ -23,5 +23,5 @@ public interface ModeloBase<T> extends Serializable {
 
     public T getId();
 
-    public void setId();
+    public void setId(T id);
 }
