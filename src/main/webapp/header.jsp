@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
-	<title>Genesis</title>
+	<title>GeNIS</title>
 	<link href="<c:url value="/bootstrap/css/bootstrap.css"/>" rel="stylesheet" type="text/css" />
 	<link href="<c:url value="/css/genesis.css"/>" rel="stylesheet" type="text/css" />
 	
