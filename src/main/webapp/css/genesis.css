@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+table thead tr {
+	background-color: #069;
+	color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+.alert {
+	position: absolute;
+	right: 0;
+	bottom: 2em;
+	width: 380px;
+}
+
+a.brand.logo {
+	color: #074D70;
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+.v-footer {
+	height: 40px;
+	background-color: #004568;
+	color: white;
+}
+
+.v-footer a {
+	color: white;
+}
+
+.div-inline {
+	display: inline;
+}
+
+div.well{
+	margin-top: -60px;
+	margin-bottom: 20	px;
+	border: solid 1px #004568;
+	color: #004568;
+}
+
+span.logo {
+	display: block;
+	font-weight: bold;
+	font-size: 50px;
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
