@@ -1,7 +1,5 @@
 <%@ include file="../../../header.jsp"%>
 
-</head>
-<body>
 	<form class="form-horizontal" action="#">
 		<div class="control-group">
 			<label class="control-label" for="inputLogin">Login</label>
@@ -23,7 +21,5 @@
 		</div>
 
 	</form>
-</body>
-</html>
 
 <%@ include file="../../../footer.jsp"%>

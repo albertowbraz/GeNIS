@@ -6,8 +6,8 @@
      <div class="footer v-footer">
               <p>
               	<a href="http://herbethmilhome.blogspot.com.br/">
-              		Herbeth Milhome 
-              	</a> | Genesis 2014
+              		Equipe Rockets
+              	</a> | GeNIS 2014
              </p>
      </div>
       
