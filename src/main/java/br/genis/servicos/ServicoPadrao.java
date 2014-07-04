@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
@@ -18,10 +17,11 @@ import javax.transaction.Transactional.TxType;
 import br.genis.modelos.ModeloBase;
 
 /**
- * Classe responsável por garantir as principais funções de CRUD da camada de serviço. Todas as classes de serviço
- * deverão extender dela e implementar o método validar(T entidade) a fim de garantir a consistência e regras de 
- * negócio das entidades que vão para o banco de dados. Qualquer regra de negócio específica deverá ser implementada
- * na classe de serviço específica.
+ * Classe responsável por garantir as principais funções de CRUD da camada de
+ * serviço. Todas as classes de serviço deverão extender dela e implementar o
+ * método validar(T entidade) a fim de garantir a consistência e regras de
+ * negócio das entidades que vão para o banco de dados. Qualquer regra de
+ * negócio específica deverá ser implementada na classe de serviço específica.
  * 
  * @author Maciel Melo
  * @since 29/06/2014
@@ -30,7 +30,7 @@ import br.genis.modelos.ModeloBase;
 public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 	ServicoBase<T> {
 
-    @PersistenceContext
+    // @PersistenceContext
     protected EntityManager em;
 
     /**

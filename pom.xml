@@ -5,7 +5,7 @@
 	<artifactId>GeNIS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -21,46 +21,46 @@
 			<artifactId>vraptor</artifactId>
 			<version>4.0.0.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
 			<version>3.18.1-GA</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>el-api</artifactId>
 			<version>2.2</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-		
+
 		<!-- Hibernate/JPA -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -73,7 +73,7 @@
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
 			<version>1.0.1.Final</version>
 		</dependency>
-		
+
 		<!-- Testes Unitários -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -81,7 +81,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
@@ -134,38 +134,13 @@
 					<ajdtVersion>none</ajdtVersion>
 				</configuration>
 			</plugin>
-
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.3</version>
-				<executions>
-					<execution>
-						<id>distribution</id>
-						<phase>package</phase>
-						<configuration>
-							<descriptors>
-								<descriptor>assembly.xml</descriptor>
-							</descriptors>
-						</configuration>
-						<goals>
-							<goal>assembly</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>distribution-eclipse</id>
-						<phase>package</phase>
-						<configuration>
-							<descriptors>
-								<descriptor>assembly-eclipse.xml</descriptor>
-							</descriptors>
-						</configuration>
-						<goals>
-							<goal>assembly</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		
+			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <version>2.3</version> 
+				<executions> <execution> <id>distribution</id> <phase>package</phase> <configuration> 
+				<descriptors> <descriptor>assembly.xml</descriptor> </descriptors> </configuration> 
+				<goals> <goal>assembly</goal> </goals> </execution> <execution> <id>distribution-eclipse</id> 
+				<phase>package</phase> <configuration> <descriptors> <descriptor>assembly-eclipse.xml</descriptor> 
+				</descriptors> </configuration> <goals> <goal>assembly</goal> </goals> </execution> 
+				</executions> </plugin> -->
 		</plugins>
 	</build>
 </project>

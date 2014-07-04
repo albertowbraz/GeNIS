@@ -3,6 +3,7 @@ package br.genis.servicos;
 import javax.persistence.EntityManager;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -13,6 +14,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import br.genis.modelos.ModeloBase;
 
 @RunWith(MockitoJUnitRunner.class)
+@Ignore
 public class ServicoPadraoTest {
     @Mock
     private EntityManager em;

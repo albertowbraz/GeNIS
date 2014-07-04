@@ -22,6 +22,20 @@
 
 			<property name="javax.persistence.validation.mode" value="NONE" />
 			<property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
+			
+			<!-- configuracao do Envers -->
+
+			<property name="post-insert" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="post-update" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="post-delete" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="pre-collection-update" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="pre-collection-remove" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="post-collection-recreate" value="org.hibernate.envers.event.AuditEventListener" />
+
+			<property name="org.hibernate.envers.audit_table_prefix" value="log_" />
+			<property name="org.hibernate.envers.revision_field_name" value="id_versao" />
+			<property name="org.hibernate.envers.revision_type_field_name" value="tipo_acao" />
+			<property name="org.hibernate.envers.do_not_audit_optimistic_locking_field" value="true" />
 
 		</properties>
 	</persistence-unit>
