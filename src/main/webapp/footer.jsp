@@ -5,8 +5,8 @@
 	
      <div class="footer v-footer">
               <p>
-              	<a href="http://herbethmilhome.blogspot.com.br/">
-              		Equipe Rockets
+              	<a href="https://www.facebook.com/NucleoIntegradoDeSaudeNis">
+              		Núcleo Integrado de Saúde - NIS
               	</a> | GeNIS 2014
              </p>
      </div>
