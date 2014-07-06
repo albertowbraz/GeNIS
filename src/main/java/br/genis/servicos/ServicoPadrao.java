@@ -9,11 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 
 import br.genis.modelos.ModeloBase;
 
@@ -24,15 +28,17 @@ import br.genis.modelos.ModeloBase;
  * na classe de serviço específica.
  * 
  * @author Maciel Melo
- * @since 29/06/2014
+ * @since 05/07/2014
  */
+
+@Stateless
 @Transactional
 public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 	ServicoBase<T> {
 
-    @PersistenceContext
+	@PersistenceContext
     protected EntityManager em;
-
+	
     /**
      * Este método recebera uma entidade como parâmetro de deve checar a
      * validade da mesma aplicando todas as regras de negócios inerentes a
@@ -48,7 +54,7 @@ public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 		if (entidade.getId() == null) {
 		    em.persist(entidade);
 		} else {
-		    em.merge(entidade);
+			em.merge(entidade);
 		}
 	    } catch (Exception e) {
 		throw new ServicoBaseException(
@@ -63,7 +69,7 @@ public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
     @Transactional(value = TxType.MANDATORY)
     public void deletar(T entidade) throws ServicoBaseException {
 	try {
-	    em.remove(entidade);
+		em.remove(entidade);
 	} catch (Exception e) {
 	    throw new ServicoBaseException(
 		    "Erro ao executar uma operação para remoção da entidade: "
@@ -204,4 +210,23 @@ public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 	}
 	return result;
     }
+    
+	protected Criteria getCriteria(Class<T> modelClass) {
+		return montarCriteria(modelClass);
+	}
+
+	private Criteria montarCriteria(Class<T> modelClass) {
+		Session session = em.unwrap(Session.class);
+
+		String aliasEntityRoot = modelClass.getClass().getSimpleName()
+				.substring(0, 1).toLowerCase()
+				+ modelClass.getSimpleName().substring(1,
+						modelClass.getSimpleName().length());
+
+		Criteria criteria = session.createCriteria(modelClass.getName(),
+				aliasEntityRoot);
+		criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+		return criteria;
+	}
+
 }
