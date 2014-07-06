@@ -19,4 +19,13 @@
 	<div id="contentWrap">
 	
 		<div class="well">
+			<c:if test="${not empty mensagem}" >
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert">
+						<span aria-hidden="true">&times;</span><span class="sr-only"></span>
+					</button>
+					<strong>Atenção!</strong> ${mensagem}
+				</div>
+			</c:if>
 		</div>
+		

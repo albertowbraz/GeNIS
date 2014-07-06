@@ -1,16 +1,16 @@
 <%@ include file="../../../header.jsp"%>
 
-	<form class="form-horizontal" action="#">
+	<form class="form-horizontal" action="<c:url value='/verificaLogin' />" >
 		<div class="control-group">
 			<label class="control-label" for="inputLogin">Login</label>
 			<div class="controls">
-				<input type="text" id="inputLogin" placeholder="Login">
+				<input type="text" id="inputLogin" name="usuario.login" placeholder="Login">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputSenha">Senha</label>
 			<div class="controls">
-				<input type="password" id="inputSenha" placeholder="Senha">
+				<input type="password" id="inputSenha" name="usuario.senha" placeholder="Senha">
 			</div>
 		</div>
 
