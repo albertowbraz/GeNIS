@@ -14,6 +14,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import br.genis.modelos.ModeloBase;
 
 @RunWith(MockitoJUnitRunner.class)
+@Ignore
 public class ServicoPadraoTest {
     @Mock
     private EntityManager em;

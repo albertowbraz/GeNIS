@@ -22,10 +22,11 @@ import org.hibernate.Session;
 import br.genis.modelos.ModeloBase;
 
 /**
- * Classe responsável por garantir as principais funções de CRUD da camada de serviço. Todas as classes de serviço
- * deverão extender dela e implementar o método validar(T entidade) a fim de garantir a consistência e regras de 
- * negócio das entidades que vão para o banco de dados. Qualquer regra de negócio específica deverá ser implementada
- * na classe de serviço específica.
+ * Classe responsável por garantir as principais funções de CRUD da camada de
+ * serviço. Todas as classes de serviço deverão extender dela e implementar o
+ * método validar(T entidade) a fim de garantir a consistência e regras de
+ * negócio das entidades que vão para o banco de dados. Qualquer regra de
+ * negócio específica deverá ser implementada na classe de serviço específica.
  * 
  * @author Maciel Melo
  * @since 05/07/2014

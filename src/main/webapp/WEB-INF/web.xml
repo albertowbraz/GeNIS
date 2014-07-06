@@ -6,13 +6,17 @@
 
 	<display-name>GeNIS</display-name>
 
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
 	<context-param>
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 		<param-value>messages</param-value>
 	</context-param>
-
-	<session-config>
-		<session-timeout>30</session-timeout>
-	</session-config>
 
 </web-app>

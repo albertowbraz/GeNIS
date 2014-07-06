@@ -13,7 +13,7 @@ import br.genis.servicos.UsuarioDao;
 public class IndexController {
 
 	private UsuarioDao dao;
-	private final Result result;
+	private Result result;
 
 	/**
 	 * @deprecated CDI eyes only
