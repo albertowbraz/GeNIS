@@ -33,7 +33,6 @@ import br.genis.modelos.ModeloBase;
  */
 
 @Stateless
-@Transactional
 public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 	ServicoBase<T> {
 

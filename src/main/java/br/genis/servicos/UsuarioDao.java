@@ -5,10 +5,13 @@ import javax.ejb.Stateless;
 import br.genis.modelos.Usuario;
 
 @Stateless
-public class UsuarioDao extends GenericDAO<Usuario>{
+public class UsuarioDao extends ServicoPadrao<Usuario>{
 	
-	private static final long serialVersionUID = 657115834272358690L;
-
+	@Override
+	Boolean validar(Usuario entidade) throws ServicoBaseException {
+		return true;
+	}
+	
 	public Usuario verificaLogin(String login, String senha) {
 		Usuario usuario = null;
 
