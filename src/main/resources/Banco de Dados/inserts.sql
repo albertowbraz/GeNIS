@@ -1,0 +1,1 @@
+INSERT INTO usuario (dtype, id, nome, login, senha, email, status) values ('administrador', nextval('seq_usuarios'), 'Herbeth Milhome', 'Herbeth', '123', 'h2milhome@gmail.com', 0);
