@@ -1,4 +1,4 @@
-package br.genis.controller;
+package br.genis.controles;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -7,12 +7,12 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 import br.genis.modelos.Usuario;
-import br.genis.servicos.UsuarioDao;
+import br.genis.servicos.UsuarioServico;
 
 @Controller
 public class IndexController {
 
-	private UsuarioDao dao;
+	private UsuarioServico dao;
 	private Result result;
 
 	/**
@@ -23,7 +23,7 @@ public class IndexController {
 	}
 	
 	@Inject
-	public IndexController(Result result, UsuarioDao dao) {
+	public IndexController(Result result, UsuarioServico dao) {
 		this.result = result;
 		this.dao = dao;
 	}

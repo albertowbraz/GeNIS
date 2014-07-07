@@ -5,7 +5,7 @@ import javax.ejb.Stateless;
 import br.genis.modelos.Usuario;
 
 @Stateless
-public class UsuarioDao extends ServicoPadrao<Usuario>{
+public class UsuarioServico extends ServicoPadrao<Usuario>{
 	
 	@Override
 	Boolean validar(Usuario entidade) throws ServicoBaseException {
