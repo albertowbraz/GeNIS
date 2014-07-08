@@ -35,9 +35,10 @@ import br.genis.modelos.ModeloBase;
 @Stateless
 public abstract class ServicoPadrao<T extends ModeloBase<?>> implements
 	ServicoBase<T> {
-
-	@PersistenceContext
-    protected EntityManager em;
+	
+	
+	@PersistenceContext(unitName = "GeNIS")
+    public EntityManager em;
 	
     /**
      * Este método recebera uma entidade como parâmetro de deve checar a
