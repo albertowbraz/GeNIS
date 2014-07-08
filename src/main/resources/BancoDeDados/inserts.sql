@@ -1,0 +1,1 @@
+INSERT INTO usuario (id, nome, login, senha, email, status) values (nextval('seq_usuarios'), 'Herbeth Milhome', 'Herbeth', '123', 'h2milhome@gmail.com', 0);
