@@ -1,5 +1,7 @@
 package br.genis.modelos;
 
+import java.util.Calendar;
+
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -7,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.envers.Audited;
@@ -28,9 +32,11 @@ public class Usuario implements ModeloBase<Long> {
 
 	private String senha;
 
-	@NotNull
 	@Column(unique = true)
 	private String email;
+
+	@Temporal(TemporalType.DATE)
+	private Calendar dataNascimento;
 
 	private String telefone;
 
@@ -125,11 +131,21 @@ public class Usuario implements ModeloBase<Long> {
 		this.endereco = endereco;
 	}
 
+	public Calendar getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Calendar dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((CPF == null) ? 0 : CPF.hashCode());
+		result = prime * result
+				+ ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result
 				+ ((endereco == null) ? 0 : endereco.hashCode());
@@ -158,6 +174,11 @@ public class Usuario implements ModeloBase<Long> {
 			if (other.CPF != null)
 				return false;
 		} else if (!CPF.equals(other.CPF))
+			return false;
+		if (dataNascimento == null) {
+			if (other.dataNascimento != null)
+				return false;
+		} else if (!dataNascimento.equals(other.dataNascimento))
 			return false;
 		if (email == null) {
 			if (other.email != null)
@@ -210,9 +231,10 @@ public class Usuario implements ModeloBase<Long> {
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nome=" + nome + ", login=" + login
-				+ ", senha=" + senha + ", email=" + email + ", telefone="
-				+ telefone + ", CPF=" + CPF + ", numeroFaltas=" + numeroFaltas
-				+ ", status=" + status + ", endereco=" + endereco + "]";
+				+ ", senha=" + senha + ", email=" + email + ", dataNascimento="
+				+ dataNascimento + ", telefone=" + telefone + ", CPF=" + CPF
+				+ ", numeroFaltas=" + numeroFaltas + ", status=" + status
+				+ ", endereco=" + endereco + "]";
 	}
 
 }

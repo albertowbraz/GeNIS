@@ -1,10 +1,9 @@
 package br.genis.modelos;
 
-import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 
-@Entity(name = "medico_atendente")
-public class MedicoAtendente extends Usuario {
+//@Entity(name = "medico_atendente")
+public class MedicoAtendente {
 
 	private static final long serialVersionUID = 7940681390601599589L;
 

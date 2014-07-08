@@ -2,7 +2,7 @@ package br.genis.modelos;
 
 import javax.persistence.Lob;
 
-public class Paciente extends Usuario {
+public class Paciente {
 
 	private static final long serialVersionUID = -6355558396116940811L;
 
