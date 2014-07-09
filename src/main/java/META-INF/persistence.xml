@@ -5,8 +5,8 @@
 	<persistence-unit name="GeNIS" transaction-type="JTA">
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<jta-data-source>jdbc_genis_dev</jta-data-source>
-
+		<jta-data-source>jdbc/genis_dev</jta-data-source>
+		
 		<properties>
 
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
