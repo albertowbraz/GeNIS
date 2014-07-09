@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.envers.Audited;
 
@@ -32,7 +31,6 @@ public class Usuario implements ModeloBase<Long> {
 
 	private String senha;
 
-	@Column(unique = true)
 	private String email;
 
 	@Temporal(TemporalType.DATE)
@@ -40,13 +38,12 @@ public class Usuario implements ModeloBase<Long> {
 
 	private String telefone;
 
-	@Column(unique = true)
 	private String CPF;
 
 	private Long numeroFaltas;
 
-	@NotNull
-	private Integer status;
+//	@Column(columnDefinition = "int default 0")
+	private Integer status = 0;
 
 	@Embedded
 	private Endereco endereco;

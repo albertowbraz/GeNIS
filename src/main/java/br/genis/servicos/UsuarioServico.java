@@ -17,7 +17,7 @@ public class UsuarioServico extends ServicoPadrao<Usuario>{
 		return true;
 	}
 	
-	public Usuario verificaLogin(String login, String senha) {
+	public Usuario verificaLogin(String login) {
 		Usuario usuario = null;
 
 		try {
@@ -49,7 +49,8 @@ public class UsuarioServico extends ServicoPadrao<Usuario>{
 					em.merge(usuario);
 				}
 			} catch (Exception e) {
-				// TODO: 
+				log.error("ERROR: " + e);
+				System.out.println("error syso " + e);
 			}
 			
 		}
