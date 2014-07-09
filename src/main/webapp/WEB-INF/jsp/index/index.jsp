@@ -1,6 +1,6 @@
 <%@ include file="../../../header.jsp"%>
 
-	<form class="form-horizontal" action="<c:url value='/verificaLogin' />" >
+	<form class="form-horizontal" action="<c:url value='/verifica-login' />" >
 		<div class="control-group">
 			<label class="control-label" for="inputLogin">Login</label>
 			<div class="controls">
