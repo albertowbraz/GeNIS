@@ -4,11 +4,9 @@ table thead tr {
 	background-color: #069;
 	color: white;
 }
+
 #titulo-nav{
 	padding-left: 35px;
-}
-#nav-bar{
-	display: block;
 }
 
 .hidden {
