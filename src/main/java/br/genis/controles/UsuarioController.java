@@ -12,7 +12,7 @@ import br.genis.servicos.ServicoMD5;
 import br.genis.servicos.UsuarioServico;
 
 @Controller
-public class UsuarioControle {
+public class UsuarioController {
 	
 	private UsuarioServico dao;
 	private Result result;
@@ -20,12 +20,12 @@ public class UsuarioControle {
 	/**
 	 * @deprecated CDI eyes only
 	 */
-	public UsuarioControle() {
+	public UsuarioController() {
 		this(null, null);
 	}
 	
 	@Inject
-	public UsuarioControle(Result result, UsuarioServico dao) {
+	public UsuarioController(Result result, UsuarioServico dao) {
 		this.result = result;
 		this.dao = dao;
 	}
@@ -39,7 +39,7 @@ public class UsuarioControle {
 			
 			if (user.getSenha().equals(senha)) {
 				session.setAttribute("usuarioLogado", user);
-				result.redirectTo(IndexControle.class).home();
+				result.redirectTo(IndexController.class).home();
 			}
 			
 			result.include("mensagem", "Senha Inválida.");
@@ -48,7 +48,7 @@ public class UsuarioControle {
 			result.include("mensagem", "Usuário Inválido.");
 		}
 
-		result.redirectTo(IndexControle.class).index();
+		result.redirectTo(IndexController.class).index();
 
 	}
 	
@@ -62,7 +62,7 @@ public class UsuarioControle {
 			e.printStackTrace();
 		}
 		
-		result.redirectTo(IndexControle.class).home();
+		result.redirectTo(IndexController.class).home();
 		
 	}
 	
