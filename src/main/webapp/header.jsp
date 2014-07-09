@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<div id="contentWrap">
+	<div id="contentWrap" >
 	
 		<div class="well">
 			<c:if test="${not empty mensagem}" >
